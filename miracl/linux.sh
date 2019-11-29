@@ -1,9 +1,9 @@
 #!/bin/bash
 
-CC=${CROSS_COMPILE}gcc
-AR=${CROSS_COMPILE}ar
-LD=${CROSS_COMPILE}ld
-RANLIB=${CROSS_COMPILE}ranlib
+CC=gcc
+AR=ar
+LD=ld
+RANLIB=ranlib
 
 #LIB=libsm2_x86.a
 #rm $LIB
@@ -55,5 +55,4 @@ $CC -fPIC -c -O2 sm2.c
 #$CC -I. -O2  brent.c $LIB -o brent
 #$CC -I. -O2  sm2_test.c $LIB -o test
 $AR -rcv libsm2.a *.o
-$CC -fPIC -shared -o libsm2.so *.o
 rm mr*.o sm*.o
